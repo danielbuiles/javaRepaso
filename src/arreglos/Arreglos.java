@@ -5,6 +5,7 @@
  */
 package arreglos;
 
+import java.util.Scanner;
 import packete2.Heroe;
 
 /**
@@ -18,14 +19,16 @@ public class Arreglos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int edad = 99;
-        Heroe heroe =new Heroe();
-        Enemigo enemigo=new Enemigo();
+        Scanner entrada=new Scanner(System.in);
+        int[] numeros=new int[5];
         
-        //acceder
-        heroe.setEdad(edad);
+        for(int i=0;i<numeros.length;i++){
+            System.out.println("digita un numero");
+            numeros[i]=entrada.nextInt();
+        }
         
-        System.out.println(heroe.getEdad());
+        for(int i=0;i<numeros.length;i++){
+            System.out.println(numeros[i]);
+        }
     }
-    
 }
